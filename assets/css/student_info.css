@@ -1,0 +1,241 @@
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Left Panel */
+.left-panel {
+  width: 200px;
+  background-color: #0A2A3F; /* Darker shade for navbar */
+  color: white;
+  padding: 35px;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #2ECC71;
+}
+
+.nav-item {
+  margin: 25px 0;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Change background color on hover */
+}
+
+.nav-item a:hover {
+  color: #2ECC71; /* Change text color on hover */
+}
+
+/* Right Panel */
+.right-panel {
+  flex-grow: 1;
+  padding: 32px;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Ensures children flow vertically */
+  overflow: hidden; /* Prevents content overflow */
+  animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation */
+}
+
+.right-panel p {
+  margin: 0;
+}
+
+.user {
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.profile-info {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info h3 {
+  margin-bottom: 15px;
+  color: #0A2A3F;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.profile-info p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.profile-info p strong {
+  color: #333;
+}
+
+.update-form {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 20vh;
+}
+
+.update-form input {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.update-forminput:focus {
+  border-color: #2ECC71;
+  box-shadow: 0 0 5px rgba(46, 204, 113, 0.8);
+}
+.update-form input[type="submit"] {
+  background-color: #2ECC71;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-form input[type="submit"]:hover {
+  background-color: #27ae60;
+}
+
+
+
+.update-form button {
+  padding: 10px;
+  width: 10%;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.update-form button:hover {
+  background-color: #218838;
+}
+
+
+/* Modal styles */
+.modal {
+  font-size: 18px;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  position: relative;
+  margin-left: 15%;
+  margin-bottom: 10%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.logout-message {
+  font-size: 12px;
+}
+
+.modal-content input {
+  margin: 5px 0;
+  padding: 10px;
+  width: 80%;
+}
+
+.modal-content button {
+  background-color: #15B392;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 11px;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content button:hover {
+  background-color: #2ECC71;
+  transform: scale(1.03);
+}
+
+.icon-circle {
+  display: inline-flex; /* Aligns children in a flex container */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  width: 35px; /* Circle width */
+  height: 35px; /* Circle height */
+  border-radius: 50%; /* Makes the div circular */
+  background-color: #ecf0f1; /* Background color of the circle */
+  margin-left: 10px; /* Space between the title and the icon */
+}
+
+.icon-circle i {
+  font-size: 20px; /* Adjust the size of the icon */
+  color: #0A2A3F; /* Icon color */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,195 @@
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Left Panel */
+.left-panel {
+  width: 200px;
+  background-color: #0A2A3F; /* Darker shade for navbar */
+  color: white;
+  padding: 35px;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #2ECC71;
+}
+
+.nav-item {
+  margin: 25px 0;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Change background color on hover */
+}
+
+.nav-item a:hover {
+  color: #2ECC71; /* Change text color on hover */
+}
+
+/* Right Panel */
+.right-panel {
+  flex-grow: 1;
+  padding: 32px;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Ensures children flow vertically */
+  overflow: hidden; /* Prevents content overflow */
+  animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation */
+}
+
+.right-panel h2 {
+  margin: 0;
+}
+
+.content {
+  margin-top: 10px;
+}
+
+.card {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 75vh;
+}
+
+/* Table Container */
+.table-container {
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 300px; /* Limit the height of the table */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: left;
+}
+
+table, th, td {
+  border: 3px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+}
+
+th {
+  background-color: #0A2A3F;
+  color: white;
+  position: sticky; /* Keeps table headers fixed when scrolling */
+  top: 0;
+  z-index: 1;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal styles */
+.modal {
+  font-size: 18px;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  position: relative;
+  margin-left: 15%;
+  margin-bottom: 10%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.logout-message {
+  font-size: 12px;
+}
+
+.modal-content input {
+  margin: 5px 0;
+  padding: 10px;
+  width: 80%;
+}
+
+.modal-content button {
+  background-color: #15B392;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 11px;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content button:hover {
+  background-color: #2ECC71;
+  transform: scale(1.03);
+}

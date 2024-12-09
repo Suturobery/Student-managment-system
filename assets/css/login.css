@@ -1,0 +1,106 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-panel {
+  background-color: #0A2A3F;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+}
+
+.login-box h2 {
+  color: #2ECC71;
+  font-size: 38px;
+  margin-bottom: 25px;
+  text-align: left;
+  margin-left: 10%;
+}
+
+.login-box p {
+  margin: 0;
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-align: left;
+  margin-left: 10%;
+}
+
+.login-box a {
+  color: white;
+  margin-left: 15px;
+}
+
+.login-box a:hover {
+  color: #2ECC71;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"],
+.login-box input[type="email"] {
+  width: 80%;
+  padding: 15px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-box input[type="submit"] {
+  width: 80%;
+  padding: 8px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #15B392;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-box input[type="submit"]:hover {
+  background-color: #2ECC71;
+  transform: scale(1.02);
+}
+
+.error {
+  position: fixed;
+  top: -50px;
+  left: 60%;
+  transform: translateX(-50%);
+  background-color: #f44336; /* Red for error */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  z-index: 1000;
+  transition: top 0.5s ease;
+}
+
+.message-visible {
+  top: 30px; /* Slide down */
+}
+
